@@ -7,10 +7,10 @@ if [ -z $app_pid ];then
 else
     kill -9 $app_pid > /dev/null 2>&1
     if [ $? -eq 0 ];then
-        echo "应用关闭成功"
+    #    echo "应用关闭成功"
         exit 0
     else
-        echo "应用关闭失败"
+    #    echo "应用关闭失败"
         exit 1
     fi
 fi
