@@ -1,3 +1,0 @@
-app_name='first-application'
-app_log="/var/log/$app_name.log"
-app_port="8811"
