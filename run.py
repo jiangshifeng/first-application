@@ -7,6 +7,9 @@ import urllib   #用于对URL进行编解码
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler  #导入HTTP处理相关的模块  
 import socket
 import time
+import sys
+
+app_port = sys.argv[1]
 
 
 #自定义处理程序，用于处理HTTP请求  
@@ -24,7 +27,7 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         # 本机hostname
         self.hostname = socket.gethostname()
         self.app_name = 'first-application'
-        self.app_port = '8811'
+        self.app_port = app_port
         self.app_start = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())))
 
     #处理GET请求  
@@ -56,6 +59,7 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         .td_left { 
         text-align:left; 
         padding-left: 10px;
+        width:300px;
         }
         </style>
         </head>
@@ -84,8 +88,12 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
 
         #启动服务函数  
 def start_server(port):
+        t_type = 'Multi-Thread'
+        print('Starting server: %s' % t_type)
+        print('Listen PORT: %s' % port)
         http_server = HTTPServer(('', int(port)), TestHTTPHandler)
         http_server.serve_forever() #设置一直监听并接收请求  
+       
 
 #os.chdir('static')  #改变工作目录到 static 目录  
-start_server(8811)  #启动服务，监听8000端口
+start_server(app_port)  #启动服务，监听8000端口

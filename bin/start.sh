@@ -1,8 +1,9 @@
 #!/bin/bash
+#app_name=$1
 app_name='first-application'
-app_log="/var/log/$app_name.log"
+source /tmp/$app_name/app_conf
 WORK_PATH=$(cd `dirname $0`;pwd)
 cd $WORK_PATH
 cd ..
-python run.py
+python run.py $app_port
 #nohup python run.py >> $app_log &
