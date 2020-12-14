@@ -40,6 +40,7 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         table, td, th
         {
         	border:1px solid green;
+                margin:50 auto
         }
         th
         {
