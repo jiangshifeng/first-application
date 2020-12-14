@@ -6,6 +6,7 @@ import re   #引入正则表达式对象
 import urllib   #用于对URL进行编解码  
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler  #导入HTTP处理相关的模块  
 import socket
+import time
 
 
 #自定义处理程序，用于处理HTTP请求  
@@ -24,6 +25,7 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         self.hostname = socket.gethostname()
         self.app_name = 'first-application'
         self.app_port = '8811'
+        self.app_start = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())))
 
     #处理GET请求  
     def do_GET(self):
@@ -47,6 +49,14 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         	background-color:green;
         	color:white;
         }
+        .td_right { 
+        text-align:right; 
+        padding-right: 10px;
+        }
+        .td_left { 
+        text-align:left; 
+        padding-left: 10px;
+        }
         </style>
         </head>
         <body>
@@ -55,15 +65,16 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         <th>字段</th>
         <th>值</th>
         </tr>
-        <tr><td>主机名</td><td>%s</td></tr>
-        <tr><td>本机IP</td><td>%s</td></tr>
-        <tr><td>应用名</td><td>%s</td></tr>
-        <tr><td>应用端口</td><td>%s</td></tr>
+        <tr><td class='td_right'>主机名: </td><td class='td_left'>%s</td></tr>
+        <tr><td class='td_right'>本机IP: </td><td class='td_left'>%s</td></tr>
+        <tr><td class='td_right'>应用名: </td><td class='td_left'>%s</td></tr>
+        <tr><td class='td_right'>应用端口: </td><td class='td_left'>%s</td></tr>
+        <tr><td class='td_right'>应用启动时间: </td><td class='td_left'>%s</td></tr>
         </table>
         </body>
         </html>
         '''
-        templateStr = templateStr % (self.hostname, self.local_ip, self.app_name, self.app_port)
+        templateStr = templateStr % (self.hostname, self.local_ip, self.app_name, self.app_port, self.app_start)
 
         self.protocal_version = 'HTTP/1.1'  #设置协议版本  
         self.send_response(200) #设置响应状态码  
