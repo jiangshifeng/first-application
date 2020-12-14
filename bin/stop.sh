@@ -3,7 +3,7 @@
 #app_name=$1
 app_name='first-application'
 source /tmp/$app_name/app_conf
-app_pid=`lsof -i:$app_port|tail -1|awk '{print $2}'`
+app_pid=`lsof -i:$app_port|grep LISTEN|tail -1|awk '{print $2}'`
 if [ -z $app_pid ];then
     echo "应用未启动"
     exit 0
