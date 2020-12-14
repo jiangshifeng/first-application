@@ -1,0 +1,23 @@
+[2020-12-11 17:38:37] [192.168.1.224] [202012111738377580514523] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 17:38:37] [192.168.1.224] [202012111738377580514523] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738381369416663] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738381369416663] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738385699566907] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738385699566907] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738389197447993] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 17:38:38] [192.168.1.224] [202012111738389197447993] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 17:38:39] [192.168.1.224] [202012111738392717949895] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 17:38:39] [192.168.1.224] [202012111738392717949895] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 19:03:12] [192.168.1.224] [202012111903122102247130] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application'], 'path': '/first-application/', 'data': None}
+[2020-12-11 19:03:12] [192.168.1.224] [202012111903122102247130] "GET /first-application/ HTTP/1.0" 200 -
+[2020-12-11 19:03:13] [192.168.1.224] [202012111903138075465902] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application'], 'path': '/first-application/', 'data': None}
+[2020-12-11 19:03:13] [192.168.1.224] [202012111903138075465902] "GET /first-application/ HTTP/1.0" 200 -
+[2020-12-11 19:03:14] [192.168.1.224] [202012111903143925807372] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application'], 'path': '/first-application/', 'data': None}
+[2020-12-11 19:03:14] [192.168.1.224] [202012111903143925807372] "GET /first-application/ HTTP/1.0" 200 -
+[2020-12-11 19:03:18] [192.168.1.224] [202012111903183916034215] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 19:03:18] [192.168.1.224] [202012111903183916034215] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 19:03:23] [192.168.1.224] [202012111903231318244490] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 19:03:23] [192.168.1.224] [202012111903231318244490] "GET /first-application/ip HTTP/1.0" 200 -
+[2020-12-11 19:03:23] [192.168.1.224] [202012111903235196615873] [INFO] [Request Data] {'parse': None, 'token': 'xxxxx', 'command': 'GET', 'content_type': 'form', 'path_list': ['first-application', 'ip'], 'path': '/first-application/ip/', 'data': None}
+[2020-12-11 19:03:23] [192.168.1.224] [202012111903235196615873] "GET /first-application/ip HTTP/1.0" 200 -
+start.sh: line 7: 10703 Killed                  python run.py
