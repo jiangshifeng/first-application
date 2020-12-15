@@ -10,6 +10,7 @@ import time
 import sys
 
 app_port = sys.argv[1]
+app_start = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())))
 
 
 #自定义处理程序，用于处理HTTP请求  
@@ -28,7 +29,6 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         self.hostname = socket.gethostname()
         self.app_name = 'first-application'
         self.app_port = app_port
-        self.app_start = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())))
 
     #处理GET请求  
     def do_GET(self):
@@ -78,7 +78,7 @@ class TestHTTPHandler(BaseHTTPRequestHandler):
         </body>
         </html>
         '''
-        templateStr = templateStr % (self.hostname, self.local_ip, self.app_name, self.app_port, self.app_start)
+        templateStr = templateStr % (self.hostname, self.local_ip, self.app_name, self.app_port, app_start)
 
         self.protocal_version = 'HTTP/1.1'  #设置协议版本  
         self.send_response(200) #设置响应状态码  
